@@ -8,7 +8,9 @@ public class EX3 {
         Double porcentneg = 0.0;
         Double porcentpos = 0.0;
         Double soma = 0.0;
+        char finalizar = 'N';
 
+        do{
         for (int i = 0; i < valor.length; i++) {
             System.out.print("Digite o " + (i + 1) + "º valor: ");
             while (!scanner.hasNextDouble()) {
@@ -42,7 +44,11 @@ public class EX3 {
         System.out.println("A média dos valores é: " + media);
         System.out.println("A porcentagem de valores negativos é: " + (porcentneg / valor.length * 100) + "%");
         System.out.println("A porcentagem de valores positivos é: " + (porcentpos / valor.length * 100) + "%");
+        System.out.println("--------------------------------------------------");
 
+        System.out.print("Deseja finalizar o programa? (S/N): ");
+      finalizar = scanner.next().charAt( 0);
+        }while(finalizar == 'N' || finalizar == 'n');
         scanner.close();
     }
 }
